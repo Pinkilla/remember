@@ -1,17 +1,21 @@
 # Reminder
 
+![](https://img.shields.io/badge/powered_by-hand-orange?style=for-the-badge) ![](https://img.shields.io/badge/with_♥-red?style=for-the-badge)
+
+
 Comment mémoriser proprement un mot de passe pendant un certain temps ? 
 
 Cas d'usage : je dois faire une connexion `lftp` et renseigner mon mot de passe. Il est probable que je relance la commande plusieurs fois pendant ma session de travail. 
 
 Extrait d'un _Makefile_
 
+```bash
 put: 
 	@lftp -e "put -O something ; bye"\
 	 -u somelogin,$(shell ./remember.sh somelogin) sftp://ftp.example.org
+```
 
-
-_Voir exemple de `Makefile`
+_Voir exemple de `Makefile`_
 
 ## Changelog
 
@@ -25,3 +29,6 @@ _Voir exemple de `Makefile`
 
 Pierre Bettens (pit) <pb@namok.be>  
 Ante 
+
+
+[![CC](cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/deed.fr)
