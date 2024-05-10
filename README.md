@@ -3,11 +3,11 @@
 ![](https://img.shields.io/badge/powered_by-hand-orange?style=for-the-badge) ![](https://img.shields.io/badge/with_♥-red?style=for-the-badge)
 
 
-Comment mémoriser proprement un mot de passe pendant un certain temps ? 
+How to securely remember a password for a certain time ?
 
-Cas d'usage : je dois faire une connexion `lftp` et renseigner mon mot de passe. Il est probable que je relance la commande plusieurs fois pendant ma session de travail. 
+Use case: I need to make an `lftp` connection and enter my password. It's likely that I'll restart the command several times during my work session.
 
-Extrait d'un _Makefile_
+Extract from a Makefile
 
 ```bash
 put: 
@@ -15,17 +15,17 @@ put:
 	 -u somelogin,$(shell ./remember.sh somelogin) sftp://ftp.example.org
 ```
 
-_Voir exemple de `Makefile`_
+_See example of `Makefile`_
 
 ## Changelog
 
-- _v -1_ Tentative de sauvegarde des mots de passe dans une variable d'environnement. 
-    Mauvaise idée. Les _envars_ sont accessibles par tous les processus. 
+- _v -1_ Attempt to save passwords in an environment variable.
+    Bad idea. Environment variables _envars_ are accessible to all processes.
 
-- _v 0.1_ Utilisation du _POC_ de Ante qui utilise le _keyring_ linux via la commande `keyctl`. 
-    Cfr. <poc-remember-ante.sh>… ça marche. 
+- _v 0.1_ Use of Ante's proof of concept (POC) that uses the Linux keyring via the `keyctl` command.
+    See <poc-remember-ante.sh>… it works.
 
-## Auteurs 
+## Authors
 
 Pierre Bettens (pit) <pb@namok.be>  
 Ante 
