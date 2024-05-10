@@ -1,0 +1,10 @@
+# ignore file in reverse order
+# first ignore all
+* 
+
+# uningnore
+!README.md
+!.gitignore
+!Makefile
+!remember*.sh
+
